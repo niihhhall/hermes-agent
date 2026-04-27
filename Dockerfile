@@ -49,7 +49,7 @@ RUN cd web && npm run build && \
     rm -rf node_modules/@hermes/ink && \
     rm -rf packages/hermes-ink/node_modules && \
     cp -R packages/hermes-ink node_modules/@hermes/ink && \
-    npm ci --omit=dev --prefer-offline --no-audit --prefix node_modules/@hermes/ink && \
+    npm install --omit=dev --prefer-offline --no-audit --prefix node_modules/@hermes/ink && \
     rm -rf packages/hermes-ink && \
     node --input-type=module -e "await import('@hermes/ink')"
 

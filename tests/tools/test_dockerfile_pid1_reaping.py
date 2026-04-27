@@ -131,7 +131,7 @@ def test_dockerfile_materializes_local_tui_ink_package(dockerfile_text):
         and "node_modules/@hermes/ink" in step
         and "packages/hermes-ink" in step
         and "rm -rf packages/hermes-ink/node_modules" in step
-        and "npm ci --omit=dev" in step
+        and "npm install --omit=dev" in step
         and "--prefix node_modules/@hermes/ink" in step
         and "rm -rf packages/hermes-ink" in step
         and "await import('@hermes/ink')" in step
